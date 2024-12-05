@@ -2,9 +2,9 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "description": "Hi! I’m Seraj A., a programmer and aspiring software developer. I’m passionate about solving problems, learning new technologies, and creating software that makes a difference.",
-  "main": "app.js",
+  "main": "api/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node api/app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +12,6 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "git": "^0.1.5",
     "mime": "^4.0.4"
   }
 }
