@@ -1,0 +1,214 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .skills {
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .skill-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .skill-title span {
+    font-size: 1.2em;
+  }
+  
+  .skill-level {
+    font-size: 1em;
+    color: #888;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 10px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .quote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    text-align: center;
+    border-left: 5px solid #4caf50;
+    font-style: italic;
+  }
+  
+  .quote blockquote p {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .quote blockquote p::before {
+    content: "“";
+    font-size: 2em;
+    color: #4caf50;
+    margin-right: 10px;
+  }
+  
+  .quote blockquote p::after {
+    content: "”";
+    font-size: 2em;
+    color: #4caf50;
+    margin-left: 10px;
+  }
+
+  .tools {
+    max-width: 900px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .tools h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .tool {
+    font-size: 1.2em;
+    color: #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #45a049;
+  }
+
+  .view-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: #333;  
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  
+
+  @keyframes progress {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--width);
+    }
+  }
+  
+
+  .skill-progress {
+    animation: progress 1s ease-in-out forwards;
+  }
+    /* HTML */
+ 
+  .skill:nth-child(1) .skill-progress {
+    --width: 90%;
+  }
+   /* CSS */
+  
+  .skill:nth-child(2) .skill-progress {
+    --width: 80%;
+  }
+
+  /* JavaScript */
+  .skill:nth-child(3) .skill-progress {
+    --width: 70%;
+  }
+
+   /* Python */
+  .skill:nth-child(4) .skill-progress {
+    --width: 85%;
+  }
+
+  /* C# */
+  .skill:nth-child(5) .skill-progress {
+    --width: 75%;
+  }
+
+  /* Java */
+  .skill:nth-child(6) .skill-progress {
+    --width: 75%;
+  }
+  
