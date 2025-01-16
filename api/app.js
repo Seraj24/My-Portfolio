@@ -2,12 +2,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Set the view engine and views directory
+// view engine and views directory
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'src', 'views'));
 
-// Middleware for serving static files
+// middleware for serving static files
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'assets')));
 
 
 // Routes
