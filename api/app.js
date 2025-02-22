@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '..', 'assets')));
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('index', { title: "Welcome to My Story" });
+    res.render('index', { title: "Seraj Alomari | Developer Portfolio" });
 });
 
 app.get('/skills', (req, res) => {
@@ -22,6 +22,14 @@ app.get('/skills', (req, res) => {
 
 app.get('/projects', (req, res) => {
     res.render('projects', { title: "My Projects" });
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contact', { title: "Contact" });
+});
+
+app.get('/future-projects', (req, res) => {
+    res.render('future-projects', { title: "Future Projects" });
 });
 
 // 404 Route (Catch-All)

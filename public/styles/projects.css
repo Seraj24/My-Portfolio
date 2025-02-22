@@ -1,41 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-
-  body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-  }
-  
-
-  header {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  header h1 {
-    font-size: 3.5em;
-    color: #2c3e50;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  
-  header p {
-    font-size: 1.4em;
-    color: #7f8c8d;
-    margin-top: 10px;
-  }
-  
-
   .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -136,23 +99,8 @@
     margin-top: 60px;
     width: 100%;
   }
-
-  .back-button {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 0;
-    border-radius: 5px;
-    cursor: pointer;
-  }
   
-  .back-button:hover {
-    background-color: #45a049;
-  }
+
 
   .github-link{
     font-size: 25px;
@@ -164,7 +112,7 @@
     transform: translateZ(50%);
   }
   
-  /* Responsive Adjustments */
+ 
   @media (max-width: 768px) {
     header h1 {
       font-size: 2.8em;

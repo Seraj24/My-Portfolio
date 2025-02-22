@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>School Projects</title>
+  <link rel="stylesheet" href="/styles/style.css">
   <link rel="stylesheet" href="/styles/projects.css">
 </head>
 
 <body>
 
+  <%- include('partials/header') %>
+  
   <header>
     <h1>School Projects</h1>
     <p>Explore the progress and details of all ongoing projects.</p>
@@ -43,7 +46,7 @@
       <p class="project-description">A travel booking app to book trips with ease.</p>
       
       <div class="project-details">
-        <p><strong>Status:</strong> In Progress</p>
+        <p><strong>Status:</strong> Completed</p>
         <p><strong>Team Members:</strong> Seraj, Jamie</p>
         <p><strong>Technologies:</strong> Java, Firebase, Android SDK</p>
         <p><strong>Key Feature:</strong> Hotel and flight integration</p>
@@ -82,10 +85,10 @@
         <p class="project-description">Property Rental Management System for Owners, Managers, and Tenants.</p>
         
         <div class="project-details">
-          <p><strong>Status:</strong>Completed</p>
+          <p><strong>Status:</strong> Completed</p>
           <p><strong>Team Members:</strong> Seraj</p>
           <p><strong>Technologies:</strong> ASP.NET Core, SQL, HTML, CSS, JavaScript</p>
-          <p><strong>Key Feature:</strong> Seamless System/p>
+          <p><strong>Key Feature:</strong> Seamless System</p>
   
           <a class="github-link" href="https://github.com/Seraj24/PRMS" target="_blank"><p><strong>GitHub</strong></p></a>
         </div>
@@ -103,9 +106,7 @@
   </a>
   
 
-  <footer>
-    <p>&copy; 2024 All Rights Reserved</p>
-  </footer>
+  <%- include('partials/footer') %>
 
 </body>
 

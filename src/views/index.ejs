@@ -11,19 +11,28 @@
 
 <body>
 
+  <%- include('partials/header') %>
+
   <header>
     <div class="hero">
-        <h1><%= title %></h1>
-        <p>Hi, I’m glad you’re here! Check out my work and let’s build something awesome together.</p>
-        <a href="#about-me" class="cta-btn">Get to Know Me</a>
+      <h1><%= title %></h1>
+      <p>Hi, I’m Seraj—welcome to my portfolio. I’m an Information Technology student specializing in web and mobile app development, with a focus on game development in Unity. I’m currently on the lookout for internship opportunities where I can further develop my skills and contribute to real-world projects.</p>
     </div>
-</header>
+  </header>
+
+<div class="logo-container">
+  <img class="python-logo" src="/images/python-new.png" alt="Python Logo">
+  <img class="c-sharp-logo" src="/images/c-sharp-logo.png" alt="C# Logo">
+  <img class="java-logo" src="/images/java.png" alt="Java Logo">
+  <img class="php-logo" src="/images/php.png" alt="PHP Logo">
+  <img class="unity-logo" src="/images/unity-game-engine-icon.png" alt="Unity Engine Logo">
+</div>
 
   <section id="about-me">
     <div class="about-content">
       <img src="/images/Profile_Picture.jpg" alt="Profile Image" class="profile-img">
-      <h2>Hey there, I'm Seraj!</h2>
-      <p>Welcome to my portfolio. I am a dedicated software developer with a strong focus on creating efficient, scalable, and user-centered solutions. With a passion for problem-solving, I specialize in transforming concepts into functional applications and websites that meet real-world needs. My approach combines innovation with practicality, ensuring that each project not only addresses specific challenges but also provides a seamless user experience. Explore my skills and projects below—I look forward to collaborating and driving impactful results together.</p>
+      <h2>About Me</h2>
+      <p>I'm an aspiring software developer with a passion for turning ideas into reality with clean and scalable code. Even though I'm still in school, I love working on projects that push me to design apps and solve real-world problems. Check out my school projects, and I'm also working on some exciting projects behind the scenes that aren't available just yet!</p>
   </section>
 
   <section id="skills">
@@ -57,10 +66,47 @@
     </a>
   </section>
 
+  <%- include('partials/footer') %>
  
-  <footer>
-    <p>&copy; 2025 Seraj Alomari</p>
-  </footer>
+
+  <script>
+
+    const logoColors = {
+      'c-sharp-logo': '#68217A',
+      'java-logo': '#ED8B00',
+      'php-logo': '#AEB2D5',
+      'unity-logo': '#000000'
+    };
+
+    const mainHeaderColor = '#f8c471';
+    const mainBodyTextColor = '#dcdde1'
+
+    // Function to set the header color
+    function setHeaderColor(color) {
+      document.documentElement.style.setProperty('--header-color', color == null ? mainHeaderColor : color);
+      document.documentElement.style.setProperty('--text-color', color == null ? mainBodyTextColor : color);
+    }
+
+    // Function to handle the hover effect
+    function handleLogoHover(event) {
+      const logo = event.target; // Get the logo that triggered the event
+      const color = logoColors[logo.classList[0]] || '#f8c471'; // Get color from the map or default
+
+      if (event.type === 'mouseenter') {
+        setHeaderColor(color);
+      } else if (event.type === 'mouseleave') {
+        setHeaderColor();
+      }
+    }
+
+    // Add event listeners for all logos dynamically
+    const logos = document.querySelectorAll('.c-sharp-logo, .java-logo, .php-logo, .unity-logo');
+    logos.forEach(logo => {
+      logo.addEventListener('mouseenter', handleLogoHover);
+      logo.addEventListener('mouseleave', handleLogoHover);
+    });
+
+  </script>
 
 </body>
 
