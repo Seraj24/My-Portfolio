@@ -167,7 +167,7 @@
 
    /* Python */
   .skill:nth-child(4) .skill-progress {
-    --width: 85%;
+    --width: 75%;
   }
 
   /* C# */

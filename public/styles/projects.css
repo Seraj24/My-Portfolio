@@ -1,31 +1,32 @@
 
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 40px;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 60px;
-  }
-  
- 
-  .project-card {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    position: relative;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  perspective: 1000px;
+  padding: 50px;
+  position: relative;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating & Scaling Effect */
+.project-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
   
 
   .project-card h2 {
@@ -40,7 +41,7 @@
 
   .project-description {
     font-size: 1.2em;
-    color: #7f8c8d;
+    color: #f8c471;
     margin-bottom: 25px;
     line-height: 1.6;
   }
@@ -48,7 +49,7 @@
 
   .project-details p {
     font-size: 1.1em;
-    color: #2c3e50;
+    color: #f8c471;
     margin-bottom: 15px;
     font-weight: 400;
     text-transform: capitalize;
@@ -56,7 +57,7 @@
   
   .project-details p strong {
     font-weight: bold;
-    color: #34495e;
+    color: #000000;
   }
   
 
